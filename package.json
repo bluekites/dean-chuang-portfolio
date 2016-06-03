@@ -11,6 +11,8 @@
   "author": "Dean Chuang",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "node-sass": "^3.7.0",
+    "node-sass-middleware": "^0.9.8"
   }
 }
