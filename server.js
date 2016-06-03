@@ -3,9 +3,11 @@ var path = require('path');
 var sass = require('node-sass-middleware');
 var app = express();
 
+var email = require('../hidden_data/email');
 var PORT = process.env.PORT || 3000;
 var filePath = path.resolve(__dirname, 'public');
 var sassPath = path.resolve(__dirname, 'sass');
+
 
 // set up sass middleware to convert scss into css
 app.use(
