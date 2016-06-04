@@ -7,8 +7,8 @@ var app = express();
 
 var EMAIL = require('../hidden_data/email'); // environment variable for mailing information
 var PORT = process.env.PORT || 3000;
-var filePath = path.resolve(__dirname, 'public');
-var sassPath = path.resolve(__dirname, 'sass');
+var filePath = path.join(__dirname, 'public');
+var sassPath = path.join(__dirname, 'sass');
 
 // set up sass middleware to convert scss into css
 app.use(
@@ -27,7 +27,7 @@ var transporter = nodemailer.createTransport(smtpTransport({
   secureConnection: false,
   port: 587,
   auth: {
-    user: EMAIL.username,
+    user: EMAIL.username,  // need env variables here
     pass: EMAIL.password
   }
 }));
