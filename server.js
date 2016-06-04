@@ -5,7 +5,6 @@ var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var app = express();
 
-var EMAIL = require('../hidden_data/email'); // environment variable for mailing information
 var PORT = process.env.PORT || 3000;
 var filePath = path.join(__dirname, 'public');
 var sassPath = path.join(__dirname, 'sass');
@@ -27,8 +26,8 @@ var transporter = nodemailer.createTransport(smtpTransport({
   secureConnection: false,
   port: 587,
   auth: {
-    user: EMAIL.username,  // need env variables here
-    pass: EMAIL.password
+    user: process.env['GMAIL'],  // need env variables here
+    pass: process.env['GPASS']
   }
 }));
 
