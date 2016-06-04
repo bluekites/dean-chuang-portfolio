@@ -41,6 +41,7 @@ app.get('/', function(req, res){
   res.sendFile('index.html');
 });
 
+// mailer request
 app.get('/send', function(req, res){
   var mailerOptions = {
     to: 'azurenokite@gmail.com',
