@@ -21,6 +21,10 @@ var transporter = nodemailer.createTransport(smtpTransport({
   }
 }));
 
+
+// set up autoprefixer(this goes before the sass middleware)
+app.use(autoprefixer({ browsers: 'last 2 versions', cascade: false }));
+
 // set up sass middleware to convert scss into css
 app.use(
   sass({
@@ -32,8 +36,6 @@ app.use(
   })
 );
 
-// set up autoprefixer
-app.use(autoprefixer({ browsers: 'last 2 versions', cascade: false }));
 
 // set up public directory to serve files
 app.use(express.static(filePath));
