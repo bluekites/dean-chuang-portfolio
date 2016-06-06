@@ -36,7 +36,6 @@ h6 {
   font-size: 1rem;
 }
 
-
 .section-divider {
   display: inline-block;
   width: 10%;
@@ -52,7 +51,7 @@ h6 {
 
 // Header Styles
 #masthead {
-  background: linear-gradient(rgba(40, 44, 55, 0.5), rgba(40, 44, 55, 0.5)), url("/images/portfoliobg.jpg");
+  background: linear-gradient(rgba(40, 44, 55, 0.5), rgba(40, 44, 55, 0.5)), url("/images/newportfoliobg1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -65,17 +64,33 @@ h6 {
     width: 100%;
     top: 40%;
     margin-top: -7rem;
+    color: $light-blue;
     h1 {
       font-weight: 700;
-      color: $light-blue;
       text-transform: uppercase;
       letter-spacing: .1rem;
+      margin-bottom: -10px;
     }
     h2 {
-      color: $light-blue;
+      margin-top: 0;
       text-transform: uppercase;
       letter-spacing: .1rem;
     }
   }
 }
 
+#projects {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .row{
+    margin: 0 auto;
+    figure {
+      margin: 1rem 1rem;
+    }
+  }
+}
