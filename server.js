@@ -1,6 +1,7 @@
 var express = require('express');
 var path = require('path');
 var sass = require('node-sass-middleware');
+var autoprefixer = require('express-autoprefixer');
 var nodemailer = require('nodemailer');
 var smtpTransport = require('nodemailer-smtp-transport');
 var app = express();
@@ -8,6 +9,17 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 var filePath = path.join(__dirname, 'public');
 var sassPath = path.join(__dirname, 'sass');
+
+// mailer smtpTransporter configuration
+var transporter = nodemailer.createTransport(smtpTransport({
+  service: 'Gmail',
+  secureConnection: false,
+  port: 587,
+  auth: {
+    user: process.env['GMAIL'],  // need env variables here
+    pass: process.env['GPASS']
+  }
+}));
 
 // set up sass middleware to convert scss into css
 app.use(
@@ -20,16 +32,8 @@ app.use(
   })
 );
 
-// mailer smtpTransporter configuration
-var transporter = nodemailer.createTransport(smtpTransport({
-  service: 'Gmail',
-  secureConnection: false,
-  port: 587,
-  auth: {
-    user: process.env['GMAIL'],  // need env variables here
-    pass: process.env['GPASS']
-  }
-}));
+// set up autoprefixer
+app.use(autoprefixer({ browsers: 'last 2 versions', cascade: false }));
 
 // set up public directory to serve files
 app.use(express.static(filePath));
@@ -60,5 +64,4 @@ app.get('/send', function(req, res){
 
 app.listen(PORT, function(){
   console.log('Server started on port ' + PORT);
-  console.log(process.env["GGMAIL"]);
 });
