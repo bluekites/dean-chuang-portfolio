@@ -1,13 +1,81 @@
+@import "./_colors.scss";
+
 body, html {
   font-size: 16px;
   font-family: "raleway", sans-serif;
   box-sizing: border-box;
 }
 
+// general styles
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.275rem;
+}
+
+h5 {
+  font-size: 1.15rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+
+.section-divider {
+  display: inline-block;
+  width: 10%;
+  margin: 0 .2rem;
+  border-top: 1px solid $light-blue;
+}
+
+.section-head {
+  display: inline-block;
+  position: relative;
+  top: .5rem;
+}
+
 // Header Styles
 #masthead {
-  background-image: url("/images/portfoliobg.jpg");
+  background: linear-gradient(rgba(40, 44, 55, 0.5), rgba(40, 44, 55, 0.5)), url("/images/portfoliobg.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
-  filter: blur(5px);
+  background-attachment: fixed;
   height: 100vh;
+  position: relative;
+  overflow: hidden;
+  #logo {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    top: 40%;
+    margin-top: -7rem;
+    h1 {
+      font-weight: 700;
+      color: $light-blue;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+    h2 {
+      color: $light-blue;
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+  }
 }
+
