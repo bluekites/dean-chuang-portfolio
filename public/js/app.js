@@ -1,6 +1,6 @@
 $(document).ready(function(){
   
-  
+  // scrolling effects
   $(window).scroll(function(){
     // declaring windowScroll
     var windowScroll = $(this).scrollTop();
@@ -13,7 +13,7 @@ $(document).ready(function(){
     // project section parallax effect
     $('.row').each(function(i){
       // won't trigger until the rows are within 50% of the browser
-      if(windowScroll > $('.row').eq(i).offset().top - ($(window).height() / 1.4)) {
+      if(windowScroll > $('.row').eq(i).offset().top - ($(window).height() / 1.3)) {
         if(i % 2 === 0) {
           $('.row').eq(i).addClass('evenshow');
         } else {
@@ -22,6 +22,10 @@ $(document).ready(function(){
       }
     });
     
+    // form fade effect
+    if(windowScroll > $('#contact-section').offset().top - ($(window).height() / 1.4)) {
+      $('form').css('opacity', '1');
+    }
   });
   
   // project section overlay
@@ -32,8 +36,6 @@ $(document).ready(function(){
     $(this).children('img').removeClass('zoom-in');
     $(this).children('.overlay').fadeToggle('slow');
   });
-  
-  
   
   // Contact Form
   var email;
