@@ -23,6 +23,7 @@
       <div class="section-header">
         <h2>Meet Dean!</h2>
         <hr>
+        <p class="about-text">I'm a web developer with a knack for Full-stack development. Originally coming from a Biological Sciences background, I later realized that programming is my true passion. With a strong grounding in both front and back end development, I am currently focusing on development with React and Node/Express.</p>
       </div>
       <div class="about-description">
         <p></p>
@@ -212,20 +213,27 @@
       </div>
     </div> <!-- end of container -->
   </section>
-  <div id="scroll-div" style="height: 2000px"></div>
-  <section class="contact-section">
-    <form>
-      <label for="email">E-mail:</label>
-      <input id="email" type="email" placeholder="Please enter your email here!">
-      <label for="name">Name:</label>
-      <input id="name" type="text" placeholder="Your name!" >
-      <label for="content">Message:</label>
-      <textarea id="content" cols="40" rows="5" placeholder="Contact me about any business opportunities!" ></textarea>
-      <div>
-        <button id="submit">Send Mail!</button>
+  <section id="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact Me!</h2>
+        <hr>
       </div>
-      <p id="message"></p>
-    </form>
+    </div>
+    <div class="form-container">
+      <form>
+        <label for="email">E-mail:</label>
+        <input id="email" type="email" placeholder="Please enter your email here!">
+        <label for="name">Name:</label>
+        <input id="name" type="text" placeholder="Your name!" >
+        <label for="content">Message:</label>
+        <textarea id="content" cols="40" rows="5" placeholder="Contact me about any business opportunities!" ></textarea>
+        <div>
+          <button id="submit">Send Mail!</button>
+        </div>
+        <p id="message"></p>
+      </form>
+    </div>
   </section>
   <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>

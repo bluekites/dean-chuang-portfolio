@@ -48,6 +48,9 @@ $(document).ready(function(){
     message.text('Sending your message...Please wait');
     $.get('/send', {email: email, name: name, content: content}, function(data){
       if(data === 'sent') {
+        $('#email').val('');
+        $('#name').val('');
+        $('#content').val('');
         message.text('Message sent! Thank you for contacting me!');
       }
     });
