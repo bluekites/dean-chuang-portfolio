@@ -114,6 +114,13 @@ a:active {
     background-position: center center;
     background-attachment: fixed;
     border-radius: 50%;
+    @media(max-width: 500px) {
+      background-attachment: none;
+      width: 250;
+      height: 250;
+      background-repeat: none;
+      
+    }
   }
 }
 
@@ -203,7 +210,7 @@ a:active {
 
 #contact-section {
   text-align: center;
-  padding: 2rem 0 15rem;
+  padding: 2rem 0 12rem;
   background-color: $dark-color;
   .section-header {
     margin-top: 5rem;
