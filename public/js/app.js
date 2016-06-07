@@ -13,7 +13,7 @@ $(document).ready(function(){
     // project section parallax effect
     $('.row').each(function(i){
       // won't trigger until the rows are within 50% of the browser
-      if(windowScroll > $('.row').eq(i).offset().top - ($(window).height() / 1.3)) {
+      if(windowScroll > $('.row').eq(i).offset().top - ($(window).height() / 1.4)) {
         if(i % 2 === 0) {
           $('.row').eq(i).addClass('evenshow');
         } else {
@@ -26,8 +26,10 @@ $(document).ready(function(){
   
   // project section overlay
   $('.overlay-container').on('mouseenter', function(){
+    $(this).children('img').addClass('zoom-in');
     $(this).children('.overlay').fadeToggle('slow');
   }).on('mouseleave', function(){
+    $(this).children('img').removeClass('zoom-in');
     $(this).children('.overlay').fadeToggle('slow');
   });
   
