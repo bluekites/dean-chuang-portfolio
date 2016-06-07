@@ -1,10 +1,27 @@
 $(document).ready(function(){
-  // masthead parallax effect
+  
+  
   $(window).scroll(function(){
+    // declaring windowScroll
     var windowScroll = $(this).scrollTop();
+    
+    // masthead parallax effect
     $('#logo').css({
       'transform': 'translate(0px, ' + windowScroll/2 + '%)'
     });
+    
+    // project section parallax effect
+    $('.row').each(function(i){
+      // won't trigger until the rows are within 50% of the browser
+      if(windowScroll > $('.row').eq(i).offset().top - ($(window).height() / 1.3)) {
+        if(i % 2 === 0) {
+          $('.row').eq(i).addClass('evenshow');
+        } else {
+          $('.row').eq(i).addClass('oddshow');
+        }
+      }
+    });
+    
   });
   
   // project section overlay
@@ -13,6 +30,8 @@ $(document).ready(function(){
   }).on('mouseleave', function(){
     $(this).children('.overlay').fadeToggle('slow');
   });
+  
+  
   
   // Contact Form
   var email;

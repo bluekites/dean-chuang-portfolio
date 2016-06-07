@@ -16,6 +16,9 @@ h1, h2 {
 
 p {
   letter-spacing: 2px;
+  @media(max-width: 780px) {
+    font-size: 1.2rem;
+  }
 }
 
 .section-header {
@@ -77,15 +80,47 @@ p {
   text-align: center;
   .row {
     margin: 5rem auto;
+    @media(max-width: 500px) {
+      margin: 2rem auto;
+    }
   }
   .project-description {
-    position: relative;
-    top: 3rem;
     color: $grey-blue;
     hr {
       margin: 1.5rem auto;
       width: 50%;
     }
+    @media(max-width: 600px) {
+      display: none;
+    }
+  }
+  .mobile-project-description {
+    color: $grey-blue;
+    display: none;
+    hr {
+      width: 50%;
+    }
+    @media(max-width: 600px) {
+      display: block;
+    }
+  }
+  .oddrow {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 500ms ease-in-out;
+  }
+  .evenrow {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 500ms ease-in-out;
+  }
+  .oddshow {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+  .evenshow {
+    opacity: 1;
+    transform: translateX(0px);
   }
   .overlay-container {
     position: relative;
