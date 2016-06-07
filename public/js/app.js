@@ -7,6 +7,12 @@ $(document).ready(function(){
     });
   });
   
+  // project section overlay
+  $('.overlay-container').on('mouseenter', function(){
+    $(this).children('.overlay').fadeToggle('slow');
+  }).on('mouseleave', function(){
+    $(this).children('.overlay').fadeToggle('slow');
+  });
   
   // Contact Form
   var email;
