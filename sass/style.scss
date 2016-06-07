@@ -21,6 +21,16 @@ p {
   }
 }
 
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: #000000;
+  text-decoration: none;
+  font-weight: normal;
+}
+
 .section-header {
   color: $grey-blue;
   hr {
@@ -175,10 +185,10 @@ p {
         i {
           font-size: 6rem;
           color: $dark-color;
-          transition: all 1000ms;
+          transition: all 700ms;
           &:hover {
             color: $primary-color;
-            transition: all 1000ms;
+            transition: all 700ms;
           }
         }
         .link-space {
@@ -194,10 +204,10 @@ p {
 #contact-section {
   text-align: center;
   padding: 2rem 0 15rem;
+  background-color: $dark-color;
   .section-header {
     margin-top: 5rem;
   }
-  background-color: $dark-color;
   .form-container {
     width: 50%;
     margin: 0 auto;
@@ -227,5 +237,45 @@ p {
         margin-bottom: 0;
       }
     }
+  }
+  p {
+    color: $light-color;
+    margin-top: 3rem;
+  }
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  background-color: $light-color;
+  display: none;
+  @media(max-width: 780px) {
+    width: 100%;
+  }
+  ul {
+    margin: 0;
+    li {
+      padding-top: .5rem;
+      margin: 0;
+      width: 80px;
+      display: inline-block;
+      margin-right: -4px;
+      border: 1px solid $grey-blue;
+    }
+  }
+  i {
+    font-size: 4rem;
+    color: $dark-color;
+    width: 100%;
+    &:hover {
+      color: $primary-color;
+      transition: all 700ms ease-in-out;
+    }
+  }
+  span {
+    display: inline-block;
+    color: $dark-color;
   }
 }

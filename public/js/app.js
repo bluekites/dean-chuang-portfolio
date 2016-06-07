@@ -26,6 +26,13 @@ $(document).ready(function(){
     if(windowScroll > $('#contact-section').offset().top - ($(window).height() / 1.4)) {
       $('form').css('opacity', '1');
     }
+    
+    // footer fade effect
+    if(windowScroll !== 0) {
+      $('#footer').fadeIn('slow');
+    } else {
+      $('#footer').fadeOut('slow');
+    }
   });
   
   // project section overlay
