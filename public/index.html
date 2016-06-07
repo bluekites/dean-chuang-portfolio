@@ -7,7 +7,6 @@
   <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="/css/skeleton.css">
   <link rel="stylesheet" type="text/css" href="/css/style.css">
-  <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
 </head>
 <body>
   <header id="masthead">
@@ -18,37 +17,57 @@
       <div class="section-divider"></div>  
     </div>
   </header>
-  <section id="projects">
-    <div class="row img-row">
-      <figure class="six columns category">
-        <h3>Pinterest Clone</h3>
-        <img class="u-max-full-width" src="/images/proj1.jpg">
-      </figure>
-      <figure class="six columns category">
-        <h3>Rails ToDo</h3>
-        <img class="u-max-full-width" src="/images/proj2.jpg">
-      </figure>
-    </div>
-    <div class="row img-row">
-      <figure class="six columns category">
-        <h3>Professional Blog</h3>
-        <img class="u-max-full-width" src="/images/proj3.jpg">
-      </figure>
-      <figure class="six columns category">
-        <h3>WYS Legal</h3>
-        <img class="u-max-full-width" src="/images/proj4.jpg">
-      </figure>
-    </div>
-    <div class="row img-row">
-      <figure class="six columns category">
-        <h3>Real-time Chat App</h3>
-        <img class="u-max-full-width" src="/images/proj5.jpg">
-      </figure>
-      <figure class="six columns category">
-        <h3>React Weather</h3>
-        <img class="u-max-full-width" src="/images/proj6.jpg">
-      </figure>
-    </div>
+  <section id="projects-section">
+    <div class="container">
+      <div class="row">
+        <div class="one-half column">
+          <h5>Pinterest Clone</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj1.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <h5>Rails ToDo</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj2.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <h5>Professional Blog</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj3.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <h5>WYS Legal</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj4.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="one-half column">
+          <h5>Real-time Chat</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj5.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+        <div class="one-half column">
+          <h5>React Weather App</h5>
+          <div class="overlay-container">
+            <img class="u-max-full-width" src="/images/proj6.jpg">
+            <div class="overlay"></div>
+          </div>
+        </div>
+      </div>
+    </div> <!-- end of container -->
   </section>
   <div id="scroll-div" style="height: 2000px"></div>
   <section class="contact-section">
@@ -65,7 +84,7 @@
       <p id="message"></p>
     </form>
   </section>
-  
+  <script type="text/javascript" src="/js/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="/js/app.js"></script>
 </body>
 </html>

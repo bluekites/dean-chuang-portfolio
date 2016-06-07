@@ -2,7 +2,6 @@ $(document).ready(function(){
   // masthead parallax effect
   $(window).scroll(function(){
     var windowScroll = $(this).scrollTop();
-    console.log(windowScroll);
     $('#logo').css({
       'transform': 'translate(0px, ' + windowScroll/2 + '%)'
     });

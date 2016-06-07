@@ -1,8 +1,6 @@
 @import "./_colors.scss";
 
 body, html {
-  font-size: 16px;
-  font-family: "raleway", sans-serif;
   box-sizing: border-box;
 }
 
@@ -12,41 +10,21 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.75rem;
-}
-
-h4 {
-  font-size: 1.275rem;
-}
-
-h5 {
-  font-size: 1.15rem;
-}
-
-h6 {
-  font-size: 1rem;
-}
-
 .section-divider {
   display: inline-block;
   width: 10%;
   margin: 0 .2rem;
-  border-top: 1px solid $light-blue;
+  border-top: 1px solid $light-color;
 }
 
 .section-head {
   display: inline-block;
   position: relative;
-  top: .5rem;
+  top: 1.2rem;
+}
+
+.container {
+  max-width: 80%;
 }
 
 // Header Styles
@@ -64,7 +42,7 @@ h6 {
     width: 100%;
     top: 40%;
     margin-top: -7rem;
-    color: $light-blue;
+    color: $light-color;
     h1 {
       font-weight: 700;
       text-transform: uppercase;
@@ -79,18 +57,25 @@ h6 {
   }
 }
 
-#projects {
-  width: 90%;
-  margin: 0 auto;
+
+#projects-section {
+  margin-top: 3rem;
   text-align: center;
-  .container {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .row{
-    margin: 0 auto;
-    figure {
-      margin: 1rem 1rem;
+  .overlay-container{
+    position: relative;
+    img {
+      border: 1px solid $grey-blue;
+      vertical-align: top;
+    }
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(155, 174, 200, .5);
+      z-index: 1;
     }
   }
+  
 }
