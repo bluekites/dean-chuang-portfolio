@@ -82,6 +82,11 @@ h1, h2, h3, h4, h5, h6 {
         i {
           font-size: 6rem;
           color: $dark-color;
+          transition: all 1000ms;
+          &:hover {
+            color: $primary-color;
+            transition: all 1000ms;
+          }
         }
         .link-space {
           display: inline-block;
