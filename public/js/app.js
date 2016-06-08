@@ -35,6 +35,12 @@ $(document).ready(function(){
     }
   });
   
+  // footer link for scrolling to contact form
+  $('#scroll-to-contact').click(function(e){
+    e.preventDefault();
+    $('body').animate({scrollTop: $('#contact-section').offset().top}, 3000);
+  });
+  
   // project section overlay
   $('.overlay-container').on('mouseenter', function(){
     $(this).children('img').addClass('zoom-in');
