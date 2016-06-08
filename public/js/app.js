@@ -1,5 +1,10 @@
 $(document).ready(function(){
   
+  // loading screen effect
+  $(window).load(function(){
+    $('#loader-wrapper').fadeOut('slow');
+  });
+  
   // scrolling effects
   $(window).scroll(function(){
     // declaring windowScroll
