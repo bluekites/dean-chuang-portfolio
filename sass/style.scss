@@ -66,6 +66,10 @@ a:active {
   }
 }
 
+// Fallback for loading screen in case no JS
+.no-js #loader-wrapper {
+  display: none;
+}
   
 // Header Styles
 #masthead {
