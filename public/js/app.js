@@ -50,7 +50,7 @@ $(document).ready(function(){
   // footer link for scrolling to contact form
   $('#scroll-to-contact').click(function(e){
     e.preventDefault();
-    $('body').animate({scrollTop: $('#contact-section').offset().top}, 3000);
+    $('body').animate({scrollTop: $('#contact-section').offset().top}, 1000);
   });
   
   // project section overlay

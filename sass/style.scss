@@ -176,13 +176,13 @@ a:active {
   }
   .oddrow {
     opacity: 0;
-    transform: translateX(50px);
-    transition: all 700ms ease-in-out;
+    transform: translateX(70px);
+    transition: all 500ms ease-in-out;
   }
   .evenrow {
     opacity: 0;
-    transform: translateX(-50px);
-    transition: all 700ms ease-in-out;
+    transform: translateX(-70px);
+    transition: all 500ms ease-in-out;
   }
   .oddshow {
     opacity: 1;
@@ -215,10 +215,10 @@ a:active {
         i {
           font-size: 6rem;
           color: $dark-color;
-          transition: all 700ms;
+          transition: all 500ms ease-in-out;
           &:hover {
             color: $primary-color;
-            transition: all 700ms;
+            transition: all 500ms ease-in-out;
           }
         }
         .link-space {
@@ -302,7 +302,7 @@ a:active {
     width: 100%;
     &:hover {
       color: $primary-color;
-      transition: all 700ms ease-in-out;
+      transition: all 500ms ease-in-out;
     }
   }
   span {
