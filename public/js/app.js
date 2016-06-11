@@ -73,7 +73,7 @@ $(document).ready(function(){
     name = $('#name').val();
     content = $('#content').val();
     message.text('Sending your message...Please wait');
-    $.get('/send', {email: email, name: name, content: content}, function(data){
+    $.get('/send', {email: email, name: name, content: email + ' said: ' + content}, function(data){
       if(data === 'sent') {
         $('#email').val('');
         $('#name').val('');
