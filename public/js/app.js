@@ -9,9 +9,8 @@ $(document).ready(function(){
   var $overlay = $('.overlay-container');
   
   // loading screen effect
-  $window.load(function(){
-    $('#loader-wrapper').fadeOut('slow');
-  });
+  $('#loader-wrapper').fadeOut('slow');
+  
   
   // scrolling effects
   $window.scroll(function(){
