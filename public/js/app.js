@@ -8,9 +8,9 @@ $(document).ready(function(){
   var $footer = $('#footer');
   var $overlay = $('.overlay-container');
   
-  setTimeout(function(){
+  $window.on('load', function(){
     $('#loader-wrapper').fadeOut('slow');
-  }, 2000);
+  });
   
   // scrolling effects
   $window.scroll(function(){
