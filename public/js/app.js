@@ -9,12 +9,12 @@ $(document).ready(function(){
   var $overlay = $('.overlay-container');
   
   // loading screen effect
-  $(window).load(function(){
+  $window.load(function(){
     $('#loader-wrapper').fadeOut('slow');
   });
   
   // scrolling effects
-  $(window).scroll(function(){
+  $window.scroll(function(){
     // declaring windowscroll
     var windowScroll = $(this).scrollTop();
     
