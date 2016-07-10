@@ -19,11 +19,11 @@ $(document).ready(function(){
     var windowScroll = $(this).scrollTop();
     
     // masthead parallax effect
-    if (windowScroll > 0 && windowScroll < $masthead.height()){
+    /*if (windowScroll > 0 && windowScroll < $masthead.height()){
        $logo.css({
         'transform': 'translate(0px, ' + windowScroll/2 + '%)'
       });
-    }
+    }*/
    
     // project section parallax effect
     $row.each(function(i){
