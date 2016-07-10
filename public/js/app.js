@@ -7,6 +7,7 @@ $(document).ready(function(){
   var $contact = $('#contact-section');
   var $footer = $('#footer');
   var $overlay = $('.overlay-container');
+  var $masthead = $('#masthead');
   
   $window.on('load', function(){
     $('#loader-wrapper').fadeOut('slow');
@@ -18,10 +19,12 @@ $(document).ready(function(){
     var windowScroll = $(this).scrollTop();
     
     // masthead parallax effect
-    $logo.css({
-      'transform': 'translate(0px, ' + windowScroll/2 + '%)'
-    });
-    
+    if (windowScroll > 0 && windowScroll < $masthead.height()){
+       $logo.css({
+        'transform': 'translate(0px, ' + windowScroll/2 + '%)'
+      });
+    }
+   
     // project section parallax effect
     $row.each(function(i){
       // won't trigger until the rows are within 50% of the browser
@@ -40,7 +43,7 @@ $(document).ready(function(){
     }
     
     // footer fade effect
-    if(windowScroll !== 0) {
+    if(windowScroll > 0) {
       $footer.fadeIn('slow');
     } else {
       $footer.fadeOut('slow');
