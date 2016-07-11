@@ -41,11 +41,14 @@ $(document).ready(function(){
     }
     
     // footer fade effect
-    if(windowScroll > 0) {
-      $footer.fadeIn('slow');
-    } else {
-      $footer.fadeOut('slow');
-    }
+    window.requestAnimationFrame(function(){
+      if(windowScroll > 0) {
+        $footer.fadeIn('slow');
+      } else {
+        $footer.fadeOut('slow');
+      }
+    });
+    
   });
   
   // footer hover animation 
