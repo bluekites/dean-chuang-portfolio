@@ -13,23 +13,15 @@ $(document).ready(function(){
     $('#loader-wrapper').fadeOut('slow');
   });
   
-  // throttle for the non-masthead scroll events
-  var throttle = function(callback, limit) {
-    var wait = false;                 
-    return function () {               
-      if (!wait) {                   
-        callback.call();           
-        wait = true;               
-        setTimeout(function () {   
-            wait = false;          
-        }, limit);
-      }
-    };
-  };
-  
-  var scrollEvents = throttle(function(){
+  // scrolling effects
+  $window.scroll(function(){
     // declaring windowscroll
     var windowScroll = $(this).scrollTop();
+    
+    // masthead parallax effect
+    $logo.css({
+      'transform': 'translate(0px, ' + windowScroll/2 + '%)'
+    });
    
     // project section parallax effect
     $row.each(function(i){
@@ -54,18 +46,7 @@ $(document).ready(function(){
     } else {
       $footer.fadeOut('slow');
     }
-  }, 10);
-
-  // scrolling effects
-  $window.on('scroll', function(){
-    var windowScroll = $(this).scrollTop();
-    // masthead parallax effect
-    $logo.css({
-      'transform': 'translate(0px, ' + windowScroll/2 + '%)'
-    });
   });
-  
-  $window.on('scroll', scrollEvents);
   
   // footer hover animation 
   $footer.on('mouseenter', function(){
