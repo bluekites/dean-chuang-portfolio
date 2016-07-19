@@ -83,14 +83,18 @@ $(document).ready(function(){
     email = $('#email').val();
     name = $('#name').val();
     content = $('#content').val();
-    message.text('Sending your message...Please wait');
-    $.get('/send', {email: email, name: name, content: email + ' said: ' + content}, function(data){
-      if(data === 'sent') {
-        $('#email').val('');
-        $('#name').val('');
-        $('#content').val('');
-        message.text('Message sent! Thank you for contacting me!');
-      }
-    });
+    if (email === '' || name === '' || content === '') {
+      message.text('One or more fields have been left blank.');
+    } else {
+      message.text('Sending your message...Please wait');
+      $.get('/send', {email: email, name: name, content: email + ' said: ' + content}, function(data){
+        if(data === 'sent') {
+          $('#email').val('');
+          $('#name').val('');
+          $('#content').val('');
+          message.text('Message sent! Thank you for contacting me!');
+        }
+      });
+    }
   });
 });
